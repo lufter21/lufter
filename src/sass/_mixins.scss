@@ -1,0 +1,34 @@
+@mixin clr() {
+	&:after{
+		display: block;
+		content: "";
+		width: 100%;
+		clear: both;
+	}
+}
+
+//fixProportion
+@mixin fixprop($width: 1, $height: 1) {
+	&:before{
+		display: block;
+		content: "";
+		width: 100%;
+		padding-bottom: $height * (100 / $width) * 1%;
+	}
+}
+
+//gulp svg sprite
+$sprite-width: 1600;
+@mixin bgs($icon-block-w: 1, $icon-svg-w: 1) {
+	background-size: ($sprite-width / ($icon-svg-w / $icon-block-w)) * (100 / $icon-block-w) * 1% auto;
+}
+
+//other sprite
+@mixin sp($bg-position: "") {
+	background-image: url("../images/other-sprite.svg");
+	background-repeat: no-repeat;
+	@if $bg-position != "" {
+		background-position: $bg-position;
+	}
+	background-size: 50px auto;
+}

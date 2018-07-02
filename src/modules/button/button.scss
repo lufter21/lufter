@@ -1,0 +1,230 @@
+@import "../../sass/variables";
+@import "../../sass/functions";
+@import "../../sass/extends";
+@import "../../sass/mixins";
+@import "../../sass/sprite";
+
+%btn{
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	color: #FFF;
+	padding: 15px 28px 14px;
+	text-align: center;
+	text-decoration: none;
+	border: none;
+	background: $bk;
+	-webkit-appearance: none;
+	user-select: none;
+	position: relative;
+	transition: .5s;
+}
+
+%btn-icon{
+	display: block;
+	content: "";
+	position: absolute;
+	top: 50%;
+}
+
+//default btn
+.btn{
+	@extend %btn;
+}
+
+//arrow btn
+.arrow-btn{
+	@extend %btn;
+	padding-right: 43px;
+
+	&:after{
+		@extend %btn-icon;
+		width: 15px;
+		height: 16px;
+		@extend %svg-arrow-right;
+		@include bgs(15, 448);
+		right: 15px;
+		margin-top: -8px;
+	}
+}
+
+//plus btn
+.plus-btn{
+	@extend %btn;
+	padding-left: 55px;
+	border-radius: 32px;
+	
+	&:after{
+		@extend %btn-icon;
+		width: 32px;
+		height: 32px;
+		@extend %svg-plus-circle;
+		@include bgs(32, 512);
+		left: 6px;
+		margin-top: -16px;
+	}
+}
+
+
+/*toggle*/
+.toggle{
+	display: inline-block;
+	width:28px;
+	height:21px;
+	position: relative;
+	background: none;
+	border: none;
+	span{
+		height: 3px;
+		background: $rd;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		transition: .5s;
+	}
+
+	span:first-child{
+		top: 0;
+	}
+
+	span:last-child{
+		bottom: 0;
+	}
+
+	span:nth-child(2),
+	span:nth-child(3){
+		top: 9px;
+	}
+
+	&.toggled{
+		span:first-child,
+		span:last-child{
+			opacity: 0;
+		}
+		span:nth-child(2){
+			transform: rotate(-45deg);
+		}
+		span:nth-child(3){
+			transform: rotate(45deg);
+		}
+	}
+}
+
+.on-toggled{
+	&-hide{
+		&.toggled{
+			display: none !important;
+		}
+	}
+	&-show{
+		&.toggled{
+			display: block !important;
+		}
+	}
+}
+
+/*button close*/
+.btn-close{
+	display: inline-block;
+	width:25px;
+	height:25px;
+	position: relative;
+	background: none;
+	border: none;
+	&:after,
+	&:before{
+		@extend %btn-icon;
+		width: 130%;
+		height: 3px;
+		background: $rd;
+		left: -15%;
+		margin-top: -1px;
+		transition: .5s;
+	}
+	&:after{
+		transform: rotate(-45deg);
+	}
+	&:before{
+		transform: rotate(45deg);
+	}
+	&:hover{
+		&:after,
+		&:before{
+			background: #000;
+		}
+	}
+	&_v1{
+		width: 20px;
+		height: 20px;
+		background: #74C447;
+		&:after,
+		&:before{
+			height: 2px;
+			background: #FFF;
+		}
+	}
+}
+
+/*button play*/
+.btn-play{
+	display: inline-block;
+	width: 64px;
+	height: 64px;
+	border-radius: 64px;
+	background: $rd;
+	border: none;
+	transition: .5s;
+	&:before{
+		@extend %btn-icon;
+		width: 0;
+		height: 0;
+		border: 7px solid transparent;
+		border-left: 11px solid #fff;
+		left: 50%;
+		margin: -6px 0 0 -3px;
+	}
+	&:hover{
+		opacity: 0.7;
+	}
+}
+
+/*Social*/
+.social{
+	list-style: none;
+	@include clr;
+	li{
+		float: left;
+		margin-right: 23px;
+		&:last-child{
+			margin: 0;
+		}
+	}
+	&__a{
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		transition: .5s;
+		&_vk{
+			
+		}
+		&_fb{
+			
+		}
+		&_ok{
+			
+		}
+		&_tw{
+			
+		}
+		&_ing{
+			
+		}
+		&_ggl{
+			
+		}
+		&:hover{
+			opacity: .6;
+		}
+	}
+}

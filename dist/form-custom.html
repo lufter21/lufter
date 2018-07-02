@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<title>Form Custom | startTemplate</title>
+</head>
+<body>
+
+<!--WRAPPER/-->
+<div class="wrapper">
+
+<!--HEADER/-->
+<header class="header">
+	<div class="row row_col-middle header__row">
+		<div class="col-3 vw1000-col-9">
+			<a href="index.html" class="header__logo"><img src="images/dealersair.svg" alt="logo"></a>
+		</div>
+		<div class="col-9 vw1000-col-3">
+
+			<div id="header-mob-menu" class="header__nav-wrap">
+				<nav class="header__nav">
+
+					<!--Menu/-->
+					<ul class="menu">
+	<li class="menu__item menu__item_has-children">
+		<a href="index.html" class="menu__a">Home</a>
+	</li>
+	<li class="menu__item">
+		<a href="grid.html" class="menu__a">Grid</a>
+	</li>
+	<li class="menu__item menu__item_has-children">
+		<a href="#" class="menu__a">Interface</a>
+		<button class="menu__arr"></button>
+		<ul class="menu__sub-menu">
+			<li class="menu__sub-menu-item">
+				<a href="accordion.html" class="menu__sub-menu-a">Accordion</a>
+			</li>
+			<li class="menu__sub-menu-item">
+				<a href="tab.html" class="menu__sub-menu-a">Tabs</a>
+			</li>
+			<li class="menu__sub-menu-item">
+				<a href="more.html" class="menu__sub-menu-a">More</a>
+			</li>
+		</ul>
+	</li>
+	<li class="menu__item menu__item_has-children">
+		<a href="#" class="menu__a">Elements</a>
+		<button class="menu__arr"></button>
+		<ul class="menu__sub-menu">
+			<li class="menu__sub-menu-item">
+				<a href="buttons.html" class="menu__sub-menu-a">Buttons</a>
+			</li>
+			<li class="menu__sub-menu-item">
+				<a href="images.html" class="menu__sub-menu-a">Images</a>
+			</li>
+			<li class="menu__sub-menu-item">
+				<a href="video.html" class="menu__sub-menu-a">Video</a>
+			</li>
+		</ul>
+	</li>
+	<li class="menu__item menu__item_has-children">
+		<a href="form.html" class="menu__a">Form</a>
+		<button class="menu__arr"></button>
+		<ul class="menu__sub-menu">
+			<li class="menu__sub-menu-item">
+				<a href="form-custom.html" class="menu__sub-menu-a">Custom Form</a>
+			</li>
+		</ul>
+	</li>
+	<li class="menu__item">
+		<a href="popup.html" class="menu__a">Popups</a>
+	</li>
+</ul>
+					<!--/Menu-->
+
+				</nav>
+
+				<!--User/-->
+				<div class="user middle header__user">
+	<span class="user__name">
+		<a href="#" class="js-toggle user__link" data-target-elements="#user-menu,.user__thumb">Lufter</a><br>
+		<a href="#" class="user__link-logout">Выйти</a>
+	</span>
+
+	<a href="#" data-target-elements="#user-menu,.user__link" class="js-toggle user__thumb">
+		<img src="images/avatar.png" alt="avatar" class="cover-img">
+	</a>
+
+	<div id="user-menu" class="user__bubble bubble">
+
+	</div>
+
+</div>
+				<!--/User-->
+
+			</div>
+			
+		</div> 
+
+		<button class="js-toggle toggle header__toggle" data-target-elements="#header-mob-menu,.header" data-role="menu"><span></span><span></span><span></span><span></span></button>
+	</div>
+</header>
+<!--/HEADER-->
+
+<!--MAIN/-->
+<main class="main">
+
+	<div class="container wrap">
+
+
+		<form id="form" action="send.php" method="POST" enctype="multipart/form-data" class="form">
+
+			<div class="row mt-25">
+				<div class="col-12">
+					<div class="title-h2">What programming languages do you know?* (at least one language)</div>
+				</div>
+			</div>
+
+			<div class="row form__chbox-group" data-min="1">
+				<div class="col-2">
+					<div class="form__field custom-checkbox">
+						<input type="checkbox" class="custom-checkbox__input">
+						<label class="custom-checkbox__label">Java</label>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form__field custom-checkbox">
+						<input id="php-choice" type="checkbox" class="custom-checkbox__input">
+						<label class="custom-checkbox__label">PHP</label>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form__field custom-checkbox">
+						<input type="checkbox" class="custom-checkbox__input">
+						<label class="custom-checkbox__label">JavaScript</label>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form__field custom-checkbox">
+						<input type="checkbox" class="custom-checkbox__input">
+						<label class="custom-checkbox__label">C++</label>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form__field custom-checkbox">
+						<input type="checkbox" data-target-elements="#other-lang-field" class="custom-checkbox__input">
+						<label class="custom-checkbox__label">Other</label>
+					</div>
+				</div>
+				<div class="col-12">
+					<div id="other-lang-field" class="form__field hidden">
+						<input type="text" data-required="true" placeholder="Other programming languages" class="form__text-input" value="">
+						<div class="field-error-tip">Enter other programming languages</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mt-25">
+				<div class="col-12">
+					<div class="title-h2">Do you agree with privacy policy?*</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12">
+					<div class="form__field custom-checkbox">
+						<input type="checkbox" data-required="true" class="custom-checkbox__input">
+						<label class="custom-checkbox__label">
+							I agree with <a href="#">privacy policy</a>
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mt-25">
+				<div class="col-12">
+					<div class="title-h2">What is your favorite color?*</div>
+				</div>
+			</div>
+
+			<div class="row form__radio-group">
+				<div class="col-3">
+					<div class="form__field custom-radio">
+						<input type="radio" name="radio-group" class="custom-radio__input">
+						<label class="custom-radio__label">Red</label>
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="form__field custom-radio">
+						<input type="radio" name="radio-group" class="custom-radio__input">
+						<label class="custom-radio__label">Green</label>
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="form__field custom-radio">
+						<input type="radio" name="radio-group" class="custom-radio__input">
+						<label class="custom-radio__label">Blue</label>
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="form__field custom-radio">
+						<input type="radio" name="radio-group" data-target-elements="#other-color-field" class="custom-radio__input">
+						<label class="custom-radio__label">Other</label>
+					</div>
+				</div>
+				<div class="col-12">
+					<div id="other-color-field" class="form__field hidden">
+						<input type="text" data-required="true" placeholder="Other color" class="form__text-input" value="">
+						<div class="field-error-tip">Enter color</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mt-25">
+				<div class="col-12">
+					<div class="title-h2">What is your favorite animal?</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-6">
+					<div class="form__field">
+						<select name="favorite-animal" data-placeholder="Select an animal*" data-required="true">
+							<option value="monkey">Monkey</option>
+							<option value="cat">Cat</option>
+							<option>Dog</option>
+							<option value="lion">Lion</option>
+							<option value="crocodile">Crocodile</option>
+							<option value="elephant">Elephant</option>
+							<option value="other" data-target-elements="#other-animal-field">Other</option>
+						</select>
+						<div class="field-error-tip">Select an animal</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div id="other-animal-field" class="form__field hidden">
+						<input type="text" data-required="true" placeholder="Other animal" class="form__text-input" value="">
+						<div class="field-error-tip">Enter other animal</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mt-25">
+				<div class="col-12">
+					<div class="title-h2">What kind of pet do you have?</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-6">
+					<div class="form__field">
+						<select name="pets[]" multiple data-placeholder="Select pets*" data-required="true">
+							<option value="cat">Cat</option>
+							<option value="dog">Dog</option>
+							<option value="parrot">Parrot</option>
+							<option value="cavy">Cavy</option>
+							<option value="hamster">Hamster</option>
+							<option value="other" data-target-elements="#other-pets-field">Other</option>
+						</select>
+						<div class="field-error-tip">Select pets</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div id="other-pets-field" class="form__field hidden">
+						<input type="text" data-required="true" placeholder="Other pets" class="form__text-input" value="">
+						<div class="field-error-tip">Enter other pets</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mt-25">
+				<div class="col-12">
+					<div class="title-h2">Where are you from?</div>
+					<div class="txt c-gray mb-25">
+						Get data from https://get.dealersair.com/api/geo/
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12">
+					<div class="form__field countries">
+						<select name="country" data-placeholder="Select your country*" data-required="true">
+							<!--options-->
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mt-25">
+				<div class="col-12">
+					<div class="title-h2">Оn which planet would you like to fly?</div>
+					<div class="txt c-gray mb-25">
+						Start typing
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12">
+					<div class="form__field">
+						<select name="planet" data-type="autocomplete" data-placeholder="Select a planet*" data-required="true">
+							<option>Mercury</option>
+							<option>Venus</option>
+							<option>Earth</option>
+							<option>Mars</option>
+							<option>Jupiter</option>
+							<option>Saturn</option>
+							<option>Uranus</option>
+							<option>Neptune</option>
+							<option>Pluto</option>
+						</select>
+						<div class="field-error-tip">Select a planet</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mt-25">
+				<div class="col-12">
+					<div class="title-h2">Messages</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-4">
+					<div class="form__field">
+						<div class="var-height-textarea">
+							<div class="var-height-textarea__mirror"></div>
+							<textarea name="message" placeholder="Message*" data-required="true" class="var-height-textarea__textarea form__textarea"></textarea>
+						</div>
+						<div class="field-error-tip">Enter your message</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="form__field">
+						<div class="var-height-textarea var-height-textarea_wrap middle">
+							<div class="middle__inner">
+								<div class="var-height-textarea__mirror"></div>
+								<textarea name="question" placeholder="Your question*" data-required="true" class="var-height-textarea__textarea form__textarea"></textarea>
+							</div>
+						</div>
+						<div class="field-error-tip">Enter your question</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="form__field">
+						<div class="custom-select">
+							<div class="var-height-textarea var-height-textarea_wrap middle">
+								<div class="middle__inner">
+									<div class="var-height-textarea__mirror"></div>
+									<textarea name="message-autocomplete" placeholder="Variant of the message*" data-required="true" class="custom-select__input custom-select__autocomplete var-height-textarea__textarea form__textarea"></textarea>
+								</div>
+							</div>
+							<ul class="custom-select__options">
+								<li>
+									<button type="button" class="custom-select__val">I won’t beg for your love: it’s laid Safely to rest, let the earth settle…</button>
+								</li>
+								<li>
+									<button type="button" class="custom-select__val">Don’t expect my jealous letters Pouring in to plague your bride.</button>
+								</li>
+								<li>
+									<button type="button" class="custom-select__val">I won’t beg for your love: it’s laid Safely to rest, let the earth settle… Don’t expect my jealous letters Pouring in to plague your bride. But let me, nevertheless, advise you: Give her my poems to read in bed, Give her my portraits to keep — it’s wise to Be kind like that when newly-wed.</button>
+								</li>
+							</ul>
+						</div>
+						<div class="field-error-tip">Enter variant of the message</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 pad-0">
+					<div class="form__field">
+						<div class="custom-file">
+							<div class="custom-file__items">
+								<!--items-->
+							</div>
+							<label class="custom-file__btn">Upload images (less 1Mb)</label>
+							<input type="file" data-type="image.*" data-max-size="1000000" data-required="true" class="custom-file__input" multiple>
+						</div>
+						<div class="field-error-tip ta-c mt-25" data-error-text-2="Upload images (jpg, png, gif)" data-error-text-3="Upload files less 1Mb">Upload images</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mt-25">
+				<div class="col-12">
+					<button type="submit" class="form__submit button">Submit</button>
+				</div>
+			</div>
+
+			<div class="form-error-tip">Ошибка заполнения полей формы</div>
+
+		</form>
+
+	</div>
+
+</main>
+<!--/MAIN-->
+
+<!--FOOTER/-->
+<footer class="footer">
+	<div class="row footer__row">
+		<div class="col-3">
+			<div class="footer__logo">
+				<a href="#"><img src="images/dealersair.svg" alt="logo"></a>
+			</div>
+		</div>
+		<div class="col-8">
+			<div class="footer__txt">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.
+			</div>
+		</div>
+	</div>
+</footer>
+<!--/FOOTER-->
+
+</div>
+<!--/WRAPPER-->
+
+<!--POPUPs/-->
+<div class="popup">
+
+	<div id="popup-1" class="popup__window" style="max-width: 550px;">
+		<button class="popup__close btn-close"></button>
+		<div class="popup__inner" style="height: 100px;">
+			<a href="#message-popup" class="js-open-msg-popup">POPUP с сообщением</a>
+		</div> 
+	</div>
+
+	<div id="popup-2" class="popup__window" style="max-width: 550px;">
+		<button class="popup__close btn-close"></button>
+		<div class="popup__inner" style="height: 1300px;">
+			
+		</div>
+	</div>
+
+	<!--Media Popup/-->
+	<div id="media-popup" class="popup-media popup__window">
+		<button class="popup__close btn-close"></button>
+		<div class="popup__inner">
+
+			<div class="popup-media__box middle">
+
+				<img src="#" class="popup-media__image middle__img" alt="photo">
+
+				<div class="popup-media__video">
+					<a href="#" class="popup-media__play"></a>
+					<iframe src="" class="popup-media__iframe" allowfullscreen></iframe>
+				</div>
+				
+				<button class="popup-media__arr popup-media__arr_l" data-dir="prev"></button>
+				<button class="popup-media__arr popup-media__arr_r" data-dir="next"></button>
+				
+			</div>
+			
+			<div class="popup-media__bar row-col-mid">
+				<div class="popup-media__bar-date popup-media__data-0 col vw1000-col-12">
+					<!--data string 1-->
+				</div>
+				<div class="popup-media__bar-tit popup-media__data-1 col vw1000-col-12">
+					<!--data string 2-->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--/Media Popup-->
+
+	<!--Message Popup/-->
+	<div id="message-popup" class="popup-message popup__window">
+		<button class="popup__close btn-close"></button>
+		<div class="popup__inner">
+			<!-- message html -->
+		</div>
+	</div>
+	<!--/Message Popup-->
+
+</div>
+<!--/POPUPs-->
+
+<!--script defer src="js/jquery-3.1.1.min.js"></script-->
+<!--script src="js/easing.min.js"></script-->
+<!--script src="js/maskinput.min.js"></script-->
+
+<script src="js/script.js"></script>
+<script src="js/common.js"></script>
+<script async src="https://get.dealersair.com/api/geo/?key=lufter21"></script>
+
+
+</body>
+</html>
