@@ -3,7 +3,7 @@
 /*form error*/
 .form-error-tip{
 	font-size: 13px;
-	color: $rd;
+	color: $be;
 	text-align: center;
 	padding-top: 10px;
 	display: none;
@@ -20,7 +20,7 @@
 /*field error*/
 .field-error-tip{
 	font-size: 12px;
-	color: $rd;
+	color: $be;
 	padding-top: 3px;
 	display: none;
 }
@@ -31,6 +31,6 @@
 	}
 	input,
 	textarea{
-		border-color: $rd;
+		border-color: $be;
 	}
 }

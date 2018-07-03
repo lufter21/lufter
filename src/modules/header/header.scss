@@ -7,19 +7,21 @@
 	display: flex;
 	height: 100px;
 	align-items: center;
+	background: $gy;
 	transition: .21s;
 	&_fixed,
 	&.toggled{
 		background: #FFF;
 		box-shadow: 0 1px 11px rgba(0,0,0,.21);
 	}
-	&__row{
-		max-width: none;
-	}
+	
 	&__logo{
 		display: inline-block;
-		width: 100%;
-		max-width: 121px;
+		width: 79px;
+		height: 79px;
+		padding: 10px 7px;
+		border-radius: 50%;
+		background: #fff;
 		img{
 			width: 100%;
 			height: auto;
@@ -56,7 +58,7 @@
 				width: 100%;
 				overflow: auto;
 				background: #FFF;
-				border-top: 1px solid $lgy;
+				border-top: 1px solid $gy;
 				transition: .5s;
 				&.toggled{
 					visibility: visible;

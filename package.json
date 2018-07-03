@@ -42,8 +42,5 @@
     "plugins": [
       "transform-remove-strict-mode"
     ]
-  },
-  "dependencies": {
-    "npm": "^6.1.0"
   }
 }

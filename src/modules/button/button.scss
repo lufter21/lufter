@@ -77,7 +77,7 @@
 	border: none;
 	span{
 		height: 3px;
-		background: $rd;
+		background: $gn;
 		position: absolute;
 		left: 0;
 		width: 100%;
@@ -124,70 +124,6 @@
 	}
 }
 
-/*button close*/
-.btn-close{
-	display: inline-block;
-	width:25px;
-	height:25px;
-	position: relative;
-	background: none;
-	border: none;
-	&:after,
-	&:before{
-		@extend %btn-icon;
-		width: 130%;
-		height: 3px;
-		background: $rd;
-		left: -15%;
-		margin-top: -1px;
-		transition: .5s;
-	}
-	&:after{
-		transform: rotate(-45deg);
-	}
-	&:before{
-		transform: rotate(45deg);
-	}
-	&:hover{
-		&:after,
-		&:before{
-			background: #000;
-		}
-	}
-	&_v1{
-		width: 20px;
-		height: 20px;
-		background: #74C447;
-		&:after,
-		&:before{
-			height: 2px;
-			background: #FFF;
-		}
-	}
-}
-
-/*button play*/
-.btn-play{
-	display: inline-block;
-	width: 64px;
-	height: 64px;
-	border-radius: 64px;
-	background: $rd;
-	border: none;
-	transition: .5s;
-	&:before{
-		@extend %btn-icon;
-		width: 0;
-		height: 0;
-		border: 7px solid transparent;
-		border-left: 11px solid #fff;
-		left: 50%;
-		margin: -6px 0 0 -3px;
-	}
-	&:hover{
-		opacity: 0.7;
-	}
-}
 
 /*Social*/
 .social{
