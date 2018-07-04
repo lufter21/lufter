@@ -18,7 +18,7 @@
 }
 
 //gulp svg sprite
-$sprite-width: 2049;
+$sprite-width: 2817;
 @mixin bgs($icon-svg-w: 1) {
 	background-size: ($sprite-width / $icon-svg-w) * 100% auto;
 }

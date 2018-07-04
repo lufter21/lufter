@@ -170,7 +170,7 @@ h1 {
   font-size: 26px;
   font-weight: 700;
   color: #74c447;
-  margin-bottom: 1.34615em;
+  margin-bottom: 0.96154em;
 }
 
 h2 {
@@ -216,8 +216,7 @@ p + h2 {
   float: left;
   width: 100%;
   min-height: 1px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 10px;
   flex-grow: 0;
   flex-shrink: 1;
 }
@@ -232,8 +231,7 @@ p + h2 {
 
 @media (max-width: 1000px) {
   .row > [class*="col"] {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 10px 15px;
   }
   .row > div[class*="col-"]:not([class*="vw1000-col"]) {
     float: none !important;
@@ -783,11 +781,11 @@ p + h2 {
 }
 
 .arrow-btn:after {
-  background-position: 51.96752029981262% 66.66666666666667%;
+  background-position: 78.36217813423386% 0;
 }
 
 .plus-btn:after {
-  background-position: 99.96096291476903% 33.333333333333336%;
+  background-position: 44.42516268980477% 75%;
 }
 
 .btn, .arrow-btn, .plus-btn {
@@ -822,7 +820,7 @@ p + h2 {
 .arrow-btn:after {
   width: 15px;
   height: 16px;
-  background-size: 457.36607% auto;
+  background-size: 628.79464% auto;
   right: 15px;
   margin-top: -8px;
 }
@@ -839,7 +837,7 @@ p + h2 {
 .plus-btn:after {
   width: 32px;
   height: 32px;
-  background-size: 400.19531% auto;
+  background-size: 550.19531% auto;
   left: 6px;
   margin-top: -16px;
 }
@@ -1002,36 +1000,44 @@ p + h2 {
   content: "";
 }
 
-.css3-icon, .git-icon, .gulp-icon, .html5-icon, .js-icon, .mysql-icon, .php-icon, .sass-icon, .work__date:before, .wordpress-icon {
+.css3-icon, .envelope-icon, .facebook-icon, .git-icon, .gulp-icon, .html5-icon, .js-icon, .mysql-icon, .php-icon, .sass-icon, .work__date:before, .viber-icon, .wordpress-icon {
   background: url("../images/sprite.svg") no-repeat;
 }
 
 .css3-icon {
-  background-position: 99.96096291476903% 66.66666666666667%;
+  background-position: 66.63774403470715% 75%;
+}
+
+.envelope-icon {
+  background-position: 99.97396963123644% 25%;
+}
+
+.facebook-icon {
+  background-position: 97.27311101730687% 75%;
 }
 
 .git-icon {
-  background-position: 31.98001249219238% 100%;
+  background-position: 0 50%;
 }
 
 .gulp-icon {
-  background-position: 71.41104294478528% 0;
+  background-position: 34.98633346349082% 50%;
 }
 
 .html5-icon {
-  background-position: 0 66.66666666666667%;
+  background-position: 47.348951911220716% 50%;
 }
 
 .js-icon {
-  background-position: 23.985009369144286% 66.66666666666667%;
+  background-position: 78.36217813423386% 25%;
 }
 
 .mysql-icon {
-  background-position: 95.77098243331164% 100%;
+  background-position: 0 75%;
 }
 
 .php-icon {
-  background-position: 45.45067423704755% 0;
+  background-position: 29.41662838768948% 0;
 }
 
 .sass-icon {
@@ -1039,11 +1045,15 @@ p + h2 {
 }
 
 .work__date:before {
-  background-position: 39.10386965376782% 33.333333333333336%;
+  background-position: 25.70281124497992% 25%;
+}
+
+.viber-icon {
+  background-position: 99.97396963123644% 50%;
 }
 
 .wordpress-icon {
-  background-position: 62.459336369551075% 100%;
+  background-position: 0 100%;
 }
 
 .work {
@@ -1114,7 +1124,7 @@ p + h2 {
 .work__date:before {
   width: 15px;
   height: 14px;
-  background-size: 355.72917% auto;
+  background-size: 489.0625% auto;
   position: absolute;
   left: 0;
   top: 50%;
@@ -1140,8 +1150,27 @@ p + h2 {
   margin-left: 0;
 }
 
+/*contact*/
+.contact {
+  margin-top: 35px;
+}
+
+.contact__link {
+  margin-left: 35px;
+  vertical-align: middle;
+  transition: .5s;
+}
+
+.contact__link:first-child {
+  margin-left: 0;
+}
+
+.contact__link:hover {
+  opacity: .7;
+}
+
 /*icons*/
-.html5-icon, .css3-icon, .js-icon, .php-icon, .mysql-icon, .wordpress-icon, .gulp-icon, .sass-icon, .git-icon {
+.html5-icon, .css3-icon, .js-icon, .php-icon, .mysql-icon, .wordpress-icon, .gulp-icon, .sass-icon, .git-icon, .envelope-icon, .viber-icon, .facebook-icon {
   display: inline-block;
   width: 35px;
   height: 35px;
@@ -1149,51 +1178,69 @@ p + h2 {
 
 .html5-icon {
   height: 44px;
-  background-size: 533.59375% auto;
+  background-size: 733.59375% auto;
 }
 
 .css3-icon {
   width: 38px;
   height: 38px;
-  background-size: 400.19531% auto;
+  background-size: 550.19531% auto;
 }
 
 .js-icon {
   height: 38px;
-  background-size: 457.36607% auto;
+  background-size: 628.79464% auto;
 }
 
 .php-icon {
   width: 52px;
   height: 40px;
-  background-size: 320.15625% auto;
+  background-size: 440.15625% auto;
 }
 
 .mysql-icon {
-  background-size: 400.19531% auto;
+  background-size: 550.19531% auto;
 }
 
 .wordpress-icon {
   width: 38px;
   height: 38px;
-  background-size: 400.19531% auto;
+  background-size: 550.19531% auto;
 }
 
 .gulp-icon {
   width: 26px;
-  height: 54px;
-  background-size: 800.39063% auto;
+  height: 51px;
+  background-size: 1100.39063% auto;
+  position: relative;
+  bottom: 5px;
 }
 
 .sass-icon {
   width: 43px;
   height: 36px;
-  background-size: 320.15625% auto;
+  background-size: 440.15625% auto;
 }
 
 .git-icon {
   height: 40px;
-  background-size: 457.36607% auto;
+  background-size: 628.79464% auto;
+}
+
+.envelope-icon {
+  width: 39px;
+  background-size: 550.19531% auto;
+}
+
+.viber-icon {
+  width: 37px;
+  height: 39px;
+  background-size: 550.19531% auto;
+}
+
+.facebook-icon {
+  width: 32px;
+  background-size: 628.79464% auto;
 }
 
 .proportional__inner {

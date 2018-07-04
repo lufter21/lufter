@@ -4,7 +4,7 @@
 
 %svg-arrow-alt-circle-down {
 	@extend %svg-common;
-	background-position: 99.96096291476903% 0;
+	background-position: 22.212581344902386% 75%;
 }
 
 %svg-arrow-alt-circle-down-dims {
@@ -14,7 +14,7 @@
 
 %svg-arrow-right {
 	@extend %svg-common;
-	background-position: 51.96752029981262% 66.66666666666667%;
+	background-position: 78.36217813423386% 0;
 }
 
 %svg-arrow-right-dims {
@@ -24,7 +24,7 @@
 
 %svg-css3 {
 	@extend %svg-common;
-	background-position: 99.96096291476903% 66.66666666666667%;
+	background-position: 66.63774403470715% 75%;
 }
 
 %svg-css3-dims {
@@ -32,9 +32,39 @@
 	height: 512px;
 }
 
+%svg-envelope {
+	@extend %svg-common;
+	background-position: 99.97396963123644% 25%;
+}
+
+%svg-envelope-dims {
+	width: 512px;
+	height: 512px;
+}
+
+%svg-facebook {
+	@extend %svg-common;
+	background-position: 97.27311101730687% 75%;
+}
+
+%svg-facebook-dims {
+	width: 448px;
+	height: 512px;
+}
+
+%svg-facebook-messenger {
+	@extend %svg-common;
+	background-position: 54.048121570282824% 25%;
+}
+
+%svg-facebook-messenger-dims {
+	width: 448px;
+	height: 512px;
+}
+
 %svg-git {
 	@extend %svg-common;
-	background-position: 31.98001249219238% 100%;
+	background-position: 0 50%;
 }
 
 %svg-git-dims {
@@ -42,9 +72,19 @@
 	height: 512px;
 }
 
+%svg-google-plus-square {
+	@extend %svg-common;
+	background-position: 18.910932883073027% 50%;
+}
+
+%svg-google-plus-square-dims {
+	width: 448px;
+	height: 512px;
+}
+
 %svg-gulp {
 	@extend %svg-common;
-	background-position: 71.41104294478528% 0;
+	background-position: 34.98633346349082% 50%;
 }
 
 %svg-gulp-dims {
@@ -54,7 +94,7 @@
 
 %svg-html5 {
 	@extend %svg-common;
-	background-position: 0 66.66666666666667%;
+	background-position: 47.348951911220716% 50%;
 }
 
 %svg-html5-dims {
@@ -64,7 +104,7 @@
 
 %svg-js {
 	@extend %svg-common;
-	background-position: 23.985009369144286% 66.66666666666667%;
+	background-position: 78.36217813423386% 25%;
 }
 
 %svg-js-dims {
@@ -74,7 +114,7 @@
 
 %svg-mysql {
 	@extend %svg-common;
-	background-position: 95.77098243331164% 100%;
+	background-position: 0 75%;
 }
 
 %svg-mysql-dims {
@@ -84,7 +124,7 @@
 
 %svg-php {
 	@extend %svg-common;
-	background-position: 45.45067423704755% 0;
+	background-position: 29.41662838768948% 0;
 }
 
 %svg-php-dims {
@@ -94,7 +134,7 @@
 
 %svg-plus-circle {
 	@extend %svg-common;
-	background-position: 99.96096291476903% 33.333333333333336%;
+	background-position: 44.42516268980477% 75%;
 }
 
 %svg-plus-circle-dims {
@@ -114,7 +154,7 @@
 
 %svg-search {
 	@extend %svg-common;
-	background-position: 0 100%;
+	background-position: 99.97396963123644% 0;
 }
 
 %svg-search-dims {
@@ -124,7 +164,7 @@
 
 %svg-share-square {
 	@extend %svg-common;
-	background-position: 39.10386965376782% 33.333333333333336%;
+	background-position: 25.70281124497992% 25%;
 }
 
 %svg-share-square-dims {
@@ -132,9 +172,29 @@
 	height: 512px;
 }
 
+%svg-viber {
+	@extend %svg-common;
+	background-position: 99.97396963123644% 50%;
+}
+
+%svg-viber-dims {
+	width: 512px;
+	height: 512px;
+}
+
+%svg-vk {
+	@extend %svg-common;
+	background-position: 57.13520749665329% 0;
+}
+
+%svg-vk-dims {
+	width: 576px;
+	height: 512px;
+}
+
 %svg-wordpress {
 	@extend %svg-common;
-	background-position: 62.459336369551075% 100%;
+	background-position: 0 100%;
 }
 
 %svg-wordpress-dims {
@@ -144,7 +204,7 @@
 
 %svg-youtube {
 	@extend %svg-common;
-	background-position: 0 33.333333333333336%;
+	background-position: 0 25%;
 }
 
 %svg-youtube-dims {

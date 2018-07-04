@@ -101,6 +101,25 @@
 	}
 }
 
+/*contact*/
+.contact{
+	margin-top: 35px;
+	
+	&__link{
+		margin-left: 35px;
+		vertical-align: middle;
+		transition: .5s;
+
+		&:first-child{
+			margin-left: 0;
+		}
+
+		&:hover{
+			opacity: .7;
+		}
+	}
+}
+
 /*icons*/
 %icon{
 	display: inline-block;
@@ -155,9 +174,11 @@
 .gulp-icon{
 	@extend %icon;
 	width: 26px;
-	height: 54px;
+	height: 51px;
 	@extend %svg-gulp;
 	@include bgs(256);
+	position: relative;
+	bottom: 5px;
 }
 
 .sass-icon{
@@ -172,5 +193,27 @@
 	@extend %icon;
 	height: 40px;
 	@extend %svg-git;
+	@include bgs(448);
+}
+
+.envelope-icon{
+	@extend %icon;
+	width: 39px;
+	@extend %svg-envelope;
+	@include bgs(512);
+}
+
+.viber-icon{
+	@extend %icon;
+	width: 37px;
+	height: 39px;
+	@extend %svg-viber;
+	@include bgs(512);
+}
+
+.facebook-icon{
+	@extend %icon;
+	width: 32px;
+	@extend %svg-facebook;
 	@include bgs(448);
 }
