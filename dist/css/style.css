@@ -158,8 +158,42 @@ body.is-menu-opened {
   right: 0;
 }
 
+a {
+  color: #a7a7a7;
+}
+
 a:hover {
   text-decoration: none;
+}
+
+h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #74c447;
+  margin-bottom: 1.34615em;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 1.11111em;
+}
+
+p {
+  line-height: 1.5;
+  margin: 1.25em 0;
+}
+
+p:first-child {
+  margin-top: 0 !important;
+}
+
+p:last-child {
+  margin-bottom: 0 !important;
+}
+
+p + h2 {
+  margin-top: 1.94444em;
 }
 
 .row {
@@ -749,11 +783,11 @@ a:hover {
 }
 
 .arrow-btn:after {
-  background-position: 0 100%;
+  background-position: 51.96752029981262% 66.66666666666667%;
 }
 
 .plus-btn:after {
-  background-position: 41.1764705882353% 100%;
+  background-position: 99.96096291476903% 33.333333333333336%;
 }
 
 .btn, .arrow-btn, .plus-btn {
@@ -782,14 +816,19 @@ a:hover {
 
 .arrow-btn {
   padding-right: 43px;
+  background: #74c447;
 }
 
 .arrow-btn:after {
   width: 15px;
   height: 16px;
-  background-size: 357.14286% auto;
+  background-size: 457.36607% auto;
   right: 15px;
   margin-top: -8px;
+}
+
+.arrow-btn:hover {
+  opacity: .7;
 }
 
 .plus-btn {
@@ -800,7 +839,7 @@ a:hover {
 .plus-btn:after {
   width: 32px;
   height: 32px;
-  background-size: 312.5% auto;
+  background-size: 400.19531% auto;
   left: 6px;
   margin-top: -16px;
 }
@@ -958,51 +997,203 @@ a:hover {
   line-height: 1.2;
 }
 
-/*Title*/
-.title {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 0.96154em;
+.work:before, .work__date:before {
+  display: block;
+  content: "";
 }
 
-.title-h2 {
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 1.38889em;
+.css3-icon, .git-icon, .gulp-icon, .html5-icon, .js-icon, .mysql-icon, .php-icon, .sass-icon, .work__date:before, .wordpress-icon {
+  background: url("../images/sprite.svg") no-repeat;
 }
 
-/*Text*/
-.txt {
-  line-height: 1.375;
+.css3-icon {
+  background-position: 99.96096291476903% 66.66666666666667%;
 }
 
-.txt p {
-  margin: 1.5625em 0;
+.git-icon {
+  background-position: 31.98001249219238% 100%;
 }
 
-.txt p:first-child {
-  margin-top: 0 !important;
+.gulp-icon {
+  background-position: 71.41104294478528% 0;
 }
 
-.txt p:last-child {
-  margin-bottom: 0 !important;
+.html5-icon {
+  background-position: 0 66.66666666666667%;
 }
 
-.work__thumb {
+.js-icon {
+  background-position: 23.985009369144286% 66.66666666666667%;
+}
+
+.mysql-icon {
+  background-position: 95.77098243331164% 100%;
+}
+
+.php-icon {
+  background-position: 45.45067423704755% 0;
+}
+
+.sass-icon {
+  background-position: 0 0;
+}
+
+.work__date:before {
+  background-position: 39.10386965376782% 33.333333333333336%;
+}
+
+.wordpress-icon {
+  background-position: 62.459336369551075% 100%;
+}
+
+.work {
+  padding-bottom: 35px;
+  margin-bottom: 35px;
   position: relative;
 }
 
-.work__thumb:before {
-  display: block;
-  content: "";
-  width: 100%;
-  padding-bottom: 75%;
+.work__thumb {
+  border: 2px solid #f1f1f1;
 }
 
-.work__thumb img {
+.work__info {
+  padding: 15px 0 0 15px;
+}
+
+.work:before {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  height: 1px;
+  background: #f1f1f1;
+}
+
+.work:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.work:last-child:before {
+  display: none;
+}
+
+.work__title {
+  margin-bottom: 5px;
+}
+
+.work__desc {
+  font-size: 14px;
+  line-height: 1.3;
+  margin-bottom: 25px;
+  color: #a7a7a7;
+}
+
+.work__techn {
+  margin-bottom: 25px;
+}
+
+.work__icon {
+  margin-left: 20px;
+  vertical-align: middle;
+}
+
+.work__icon:first-child {
+  margin-left: 0;
+}
+
+.work__date {
+  font-size: 14px;
+  color: #a7a7a7;
+  margin-top: 15px;
+  position: relative;
+  padding-left: 22px;
+  opacity: .75;
+}
+
+.work__date:before {
+  width: 15px;
+  height: 14px;
+  background-size: 355.72917% auto;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 50%;
+  margin-top: -8px;
+}
+
+/*person*/
+.person__thumb {
+  border: 2px solid #f1f1f1;
+}
+
+.person__info {
+  padding: 15px 15px 0 0;
+}
+
+/*skills*/
+.skills__icon {
+  margin-left: 15px;
+  vertical-align: middle;
+}
+
+.skills__icon:first-child {
+  margin-left: 0;
+}
+
+/*icons*/
+.html5-icon, .css3-icon, .js-icon, .php-icon, .mysql-icon, .wordpress-icon, .gulp-icon, .sass-icon, .git-icon {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+}
+
+.html5-icon {
+  height: 44px;
+  background-size: 533.59375% auto;
+}
+
+.css3-icon {
+  width: 38px;
+  height: 38px;
+  background-size: 400.19531% auto;
+}
+
+.js-icon {
+  height: 38px;
+  background-size: 457.36607% auto;
+}
+
+.php-icon {
+  width: 52px;
+  height: 40px;
+  background-size: 320.15625% auto;
+}
+
+.mysql-icon {
+  background-size: 400.19531% auto;
+}
+
+.wordpress-icon {
+  width: 38px;
+  height: 38px;
+  background-size: 400.19531% auto;
+}
+
+.gulp-icon {
+  width: 26px;
+  height: 54px;
+  background-size: 800.39063% auto;
+}
+
+.sass-icon {
+  width: 43px;
+  height: 36px;
+  background-size: 320.15625% auto;
+}
+
+.git-icon {
+  height: 40px;
+  background-size: 457.36607% auto;
 }
 
 .proportional__inner {
@@ -1101,6 +1292,11 @@ a:hover {
 .bubble.toggled {
   visibility: visible;
   opacity: 1;
+}
+
+/*text align*/
+.ta-r {
+  text-align: right;
 }
 
 /*position*/

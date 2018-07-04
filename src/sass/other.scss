@@ -4,42 +4,173 @@
 @import "mixins";
 @import "sprite";
 
-/*Title*/
-.title{
-	font-size: 26px;
-	font-weight: 700;
-	margin-bottom: em(25, 26);
-	&-h2{
-		font-size: 18px;
-		font-weight: 500;
-		margin-bottom: em(25, 18);
-	}
-}
-
-/*Text*/
-.txt{
-	line-height: (22/16);
-	p{
-		margin: em(25) 0;
-		&:first-child{
-			margin-top: 0 !important;
-		}
-		&:last-child{
-			margin-bottom: 0 !important;
-		}
-	}
-}
-
 
 .work{
+	padding-bottom: 35px;
+	margin-bottom: 35px;
+	position: relative;
 	&__thumb{
-		@include fixprop(4,3);
-		position: relative;
-		
-		img{
-			position: absolute;
-			left: 0;
-			top: 0;
+		border: 2px solid $gy;
+	}
+
+	&__info{
+		padding: 15px 0 0 15px;
+	}
+
+	&:before{
+		@extend %ab;
+		position: absolute;
+		bottom: 0;
+		left: 10px;
+		right: 10px;
+		height: 1px;
+		background: $gy;
+	}
+
+	&:last-child{
+		margin-bottom: 0;
+		padding-bottom: 0;
+		&:before{
+			display: none;
 		}
 	}
+
+	&__title{
+		margin-bottom: 5px;
+	}
+
+	&__desc{
+		font-size: 14px;
+		line-height: 1.3;
+		margin-bottom: 25px;
+		color: $dgy;
+	}
+
+	&__techn{
+		margin-bottom: 25px;
+	}
+
+	&__icon{
+		margin-left: 20px;
+		vertical-align: middle;
+		&:first-child{
+			margin-left: 0;
+		}
+	}
+
+	&__date{
+		font-size: 14px;
+		color: $dgy;
+		margin-top: 15px;
+		position: relative;
+		padding-left: 22px;
+		opacity: .75;
+		&:before{
+			@extend %ab;
+			width: 15px;
+			height: 14px;
+			@extend %svg-share-square;
+			@include bgs(576);
+			position: absolute;
+			left: 0;
+			top: 50%;
+			margin-top: -8px;
+		}
+	}
+}
+
+/*person*/
+.person{
+	&__thumb{
+		border: 2px solid $gy;
+	}
+
+	&__info{
+		padding: 15px 15px 0 0;
+	}
+}
+
+/*skills*/
+.skills{
+	&__icon{
+		margin-left: 15px;
+		vertical-align: middle;
+		&:first-child{
+			margin-left: 0;
+		}
+	}
+}
+
+/*icons*/
+%icon{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+}
+
+.html5-icon{
+	@extend %icon;
+	height: 44px;
+	@extend %svg-html5;
+	@include bgs(384);
+}
+
+.css3-icon{
+	@extend %icon;
+	width: 38px;
+	height: 38px;
+	@extend %svg-css3;
+	@include bgs(512);
+}
+
+.js-icon{
+	@extend %icon;
+	height: 38px;
+	@extend %svg-js;
+	@include bgs(448);
+}
+
+.php-icon{
+	@extend %icon;
+	width: 52px;
+	height: 40px;
+	@extend %svg-php;
+	@include bgs(640);
+}
+
+.mysql-icon{
+	@extend %icon;
+	@extend %svg-mysql;
+	@include bgs(512);
+}
+
+.wordpress-icon{
+	@extend %icon;
+	width: 38px;
+	height: 38px;
+	@extend %svg-wordpress;
+	@include bgs(512);
+}
+
+.gulp-icon{
+	@extend %icon;
+	width: 26px;
+	height: 54px;
+	@extend %svg-gulp;
+	@include bgs(256);
+}
+
+.sass-icon{
+	@extend %icon;
+	width: 43px;
+	height: 36px;
+	@extend %svg-sass;
+	@include bgs(640);
+}
+
+.git-icon{
+	@extend %icon;
+	height: 40px;
+	@extend %svg-git;
+	@include bgs(448);
 }

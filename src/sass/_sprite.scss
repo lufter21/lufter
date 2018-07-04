@@ -4,7 +4,7 @@
 
 %svg-arrow-alt-circle-down {
 	@extend %svg-common;
-	background-position: 52.94117647058823% 0;
+	background-position: 99.96096291476903% 0;
 }
 
 %svg-arrow-alt-circle-down-dims {
@@ -14,7 +14,7 @@
 
 %svg-arrow-right {
 	@extend %svg-common;
-	background-position: 0 100%;
+	background-position: 51.96752029981262% 66.66666666666667%;
 }
 
 %svg-arrow-right-dims {
@@ -22,9 +22,79 @@
 	height: 512px;
 }
 
+%svg-css3 {
+	@extend %svg-common;
+	background-position: 99.96096291476903% 66.66666666666667%;
+}
+
+%svg-css3-dims {
+	width: 512px;
+	height: 512px;
+}
+
+%svg-git {
+	@extend %svg-common;
+	background-position: 31.98001249219238% 100%;
+}
+
+%svg-git-dims {
+	width: 448px;
+	height: 512px;
+}
+
+%svg-gulp {
+	@extend %svg-common;
+	background-position: 71.41104294478528% 0;
+}
+
+%svg-gulp-dims {
+	width: 256px;
+	height: 512px;
+}
+
+%svg-html5 {
+	@extend %svg-common;
+	background-position: 0 66.66666666666667%;
+}
+
+%svg-html5-dims {
+	width: 384px;
+	height: 512px;
+}
+
+%svg-js {
+	@extend %svg-common;
+	background-position: 23.985009369144286% 66.66666666666667%;
+}
+
+%svg-js-dims {
+	width: 448px;
+	height: 512px;
+}
+
+%svg-mysql {
+	@extend %svg-common;
+	background-position: 95.77098243331164% 100%;
+}
+
+%svg-mysql-dims {
+	width: 512px;
+	height: 512px;
+}
+
+%svg-php {
+	@extend %svg-common;
+	background-position: 45.45067423704755% 0;
+}
+
+%svg-php-dims {
+	width: 640px;
+	height: 512px;
+}
+
 %svg-plus-circle {
 	@extend %svg-common;
-	background-position: 41.1764705882353% 100%;
+	background-position: 99.96096291476903% 33.333333333333336%;
 }
 
 %svg-plus-circle-dims {
@@ -32,9 +102,19 @@
 	height: 512px;
 }
 
+%svg-sass {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+%svg-sass-dims {
+	width: 640.4px;
+	height: 512px;
+}
+
 %svg-search {
 	@extend %svg-common;
-	background-position: 100% 0;
+	background-position: 0 100%;
 }
 
 %svg-search-dims {
@@ -42,9 +122,29 @@
 	height: 512px;
 }
 
+%svg-share-square {
+	@extend %svg-common;
+	background-position: 39.10386965376782% 33.333333333333336%;
+}
+
+%svg-share-square-dims {
+	width: 576px;
+	height: 512px;
+}
+
+%svg-wordpress {
+	@extend %svg-common;
+	background-position: 62.459336369551075% 100%;
+}
+
+%svg-wordpress-dims {
+	width: 512px;
+	height: 512px;
+}
+
 %svg-youtube {
 	@extend %svg-common;
-	background-position: 0 0;
+	background-position: 0 33.333333333333336%;
 }
 
 %svg-youtube-dims {
