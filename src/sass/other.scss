@@ -106,16 +106,50 @@
 	margin-top: 35px;
 	
 	&__link{
-		margin-left: 35px;
-		vertical-align: middle;
-		transition: .5s;
+		display: inline-block;
+		padding-left: 48px;
+		position: relative;
+		
+		&:before{
+			@extend %ab;
+			width: 35px;
+			height: 35px;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			margin-top: -17px;
+		}
 
 		&:first-child{
 			margin-left: 0;
 		}
 
 		&:hover{
-			opacity: .7;
+			text-decoration: none;
+		}
+
+		&_envelope{
+			&:before{
+				height: 30px;
+				@extend %svg-envelope;
+				@include bgs(512);
+			}
+		}
+
+		&_viber{
+			&:before{
+				height: 37px;
+				@extend %svg-viber;
+				@include bgs(512);
+			}
+		}
+
+		&_facebook{
+			&:before{
+				width: 32px;
+				@extend %svg-facebook;
+				@include bgs(448);
+			}
 		}
 	}
 }
@@ -193,27 +227,5 @@
 	@extend %icon;
 	height: 40px;
 	@extend %svg-git;
-	@include bgs(448);
-}
-
-.envelope-icon{
-	@extend %icon;
-	width: 39px;
-	@extend %svg-envelope;
-	@include bgs(512);
-}
-
-.viber-icon{
-	@extend %icon;
-	width: 37px;
-	height: 39px;
-	@extend %svg-viber;
-	@include bgs(512);
-}
-
-.facebook-icon{
-	@extend %icon;
-	width: 32px;
-	@extend %svg-facebook;
 	@include bgs(448);
 }

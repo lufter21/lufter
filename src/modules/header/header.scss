@@ -5,7 +5,7 @@
 
 .header{
 	display: flex;
-	height: 100px;
+	height: 65px;
 	align-items: center;
 	background: $gy;
 	transition: .21s;
@@ -17,9 +17,9 @@
 	
 	&__logo{
 		display: inline-block;
-		width: 79px;
-		height: 79px;
-		padding: 10px 7px;
+		width: 55px;
+		height: 55px;
+		padding: 6px 3px;
 		border-radius: 50%;
 		background: #fff;
 		img{
