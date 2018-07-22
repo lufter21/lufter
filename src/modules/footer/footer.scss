@@ -4,10 +4,15 @@
 @import "../../sass/mixins";
 
 .footer{
-	padding: 20px 0;
-	background: #FFF;
-    box-shadow: 0 -1px 11px rgba(0, 0, 0, 0.21);
-    
+	padding: 10px 0 8px;
+	border-top: 1px solid $gy;
+
+	&__copy{
+		font-size: 14px;
+		color: $dgy;
+		text-align: center;
+	}
+
 	@media(max-width: 1200px){
 		
 	}
