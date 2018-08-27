@@ -45,3 +45,9 @@ p{
 		margin-top: em(35,18);
 	}
 }
+
+@media(max-width: 1000px){
+	html, body{
+		font-size: 15px;
+	}
+}

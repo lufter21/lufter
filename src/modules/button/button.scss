@@ -19,6 +19,10 @@
 	user-select: none;
 	position: relative;
 	transition: .5s;
+	
+	@media(max-width: 700px){
+		width: 100%;
+	}
 }
 
 %btn-icon{
@@ -51,6 +55,10 @@
 
 	&:hover{
 		opacity: .7;
+	}
+
+	@media(max-width: 700px){
+		padding-left: 43px;
 	}
 }
 
