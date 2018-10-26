@@ -3,17 +3,6 @@
 */
 //document is ready
 document.addEventListener('DOMContentLoaded', function() {
-	(function initFun() {
-		flexImg('.flex-img');
-
-		CoverImg.reInit();
-
-		window.addEventListener('winResized', initFun);
-	}());
-
-	//init cover images
-	CoverImg.init();
-     
 	//init toggle button
 	Toggle.init('.js-toggle');
 });

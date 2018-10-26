@@ -1,0 +1,24 @@
+{
+	"folders":
+	[
+		{
+			"path": "D:\\DEV\\lufter\\src\\js"
+		},
+		{
+			"path": "D:\\DEV\\lufter\\src\\html"
+		},
+		{
+			"path": "D:\\DEV\\lufter\\src\\sass"
+		},
+		{
+			"path": "D:\\DEV\\lufter\\src\\modules"
+		},
+		{
+			"path": "D:\\DEV\\lufter\\src\\images\\svg"
+		}
+	],
+	"settings":
+	{
+		"afn_proj_root": "D:DEV/lufter/dist/"
+	}
+}

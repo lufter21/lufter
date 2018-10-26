@@ -256,3 +256,9 @@
 	@extend %svg-git;
 	@include bgs(448);
 }
+
+.full-width-img{
+	display: block;
+	width: 100%;
+	height: auto;
+}

@@ -46,7 +46,7 @@ var modulesOn = [
 'menu',
 //'user',
 'button',
-'image',
+//'image',
 //'video',
 //'popup',
 //'form',
