@@ -3,3 +3,5 @@
 *.pdf
 *.zip
 package-lock.json
+*.*-workspace
+*.*-project
