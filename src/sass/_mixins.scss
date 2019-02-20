@@ -17,18 +17,13 @@
 	}
 }
 
-//gulp svg sprite
-$sprite-width: 2817;
-@mixin bgs($icon-svg-w: 1) {
-	background-size: ($sprite-width / $icon-svg-w) * 100% auto;
-}
-
-//other sprite
-@mixin sp($bg-position: "") {
-	background-image: url("../images/other-sprite.svg");
-	background-repeat: no-repeat;
-	@if $bg-position != "" {
-		background-position: $bg-position;
+//first child
+@mixin fch($m: default) {
+	&:first-child{
+		@if $m == t {
+			margin-top: 0 !important;
+		} @else if $m == l {
+			margin-left: 0 !important;
+		}
 	}
-	background-size: 50px auto;
 }

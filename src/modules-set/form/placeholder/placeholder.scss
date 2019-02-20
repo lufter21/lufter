@@ -1,0 +1,27 @@
+@import "../../../sass/variables";
+@import "../../../sass/functions";
+@import "../../../sass/extends";
+@import "../../../sass/mixins";
+
+.placeholder{
+	display: block;
+	height: 44px;
+	padding: 12px 15px;
+	border: 1px solid transparent;
+	line-height: normal;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	max-width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	cursor: text;
+	.form__textarea_var-h + &{
+		line-height: 1.3;
+	}
+	.form__field_error &{
+		color: $rd;
+	}
+}

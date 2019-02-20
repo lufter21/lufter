@@ -1,0 +1,66 @@
+@import "../../../sass/variables";
+@import "../../../sass/functions";
+@import "../../../sass/extends";
+@import "../../../sass/mixins";
+@import "../form-extends";
+
+.autocomplete{
+   position: relative;
+   &__input{
+      @extend %inp;
+      padding-right: 45px;
+   }
+	&__options{
+		list-style: none;
+		position: absolute;
+		left: 0;
+		top: 100%;
+		width: 100%;
+		height: 0;
+		max-height: 117px;
+		overflow: hidden;
+		z-index: 5;
+		border: 1px solid #c3c3c3;
+		border-top: none;
+		background: #F0F1F2;
+		visibility: hidden;
+		transition: .5s;
+		li{
+			border-top: 1px solid #c3c3c3;
+			&.hidden{
+				display: none;
+			}
+			&:first-child{
+				border: none;
+			}
+			&.hover{
+				.autocomplete__val{
+					background: $gy;
+					color: #fff;
+				}
+			}
+		}
+	}
+	&__val{
+		display: block;
+		width: 100%;
+		padding: 10px 15px;
+		font-weight: 300;
+		text-decoration: none;
+		text-align: left;
+		border: none;
+		transition: .5s;
+		&:hover{
+			background: $gy;
+			color: #fff;
+		}
+	}
+	&_opened{
+		.autocomplete__options{
+			visibility: visible;
+			&.ovfauto{
+				overflow: auto;
+			}
+		}
+	}
+}

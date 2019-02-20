@@ -1,0 +1,27 @@
+<header class="header">
+	<div class="row row_col-middle">
+		<div class="col-2 vw1000-col-9">
+			<a href="/" class="header__logo"><img src="/images/logo.svg" alt="Lufter logo"></a>
+		</div>
+		<div class="col-10 vw1000-col-3">
+
+			<div id="header-mob-menu" class="header__nav-wrap">
+				<nav class="header__nav">
+
+					<!--Menu/-->
+					@@include('../menu/@@menu.html', {
+						"menu_item_current_1":"@@menu_item_current_1",
+						"menu_item_current_2":"@@menu_item_current_2",
+						"menu_item_current_3":"@@menu_item_current_3"
+					})
+					<!--/Menu-->
+
+				</nav>
+
+			</div>
+			
+		</div> 
+
+		<button class="js-toggle toggle header__toggle" data-target-elements="#header-mob-menu,.header" data-role="menu"><span></span><span></span><span></span><span></span></button>
+	</div>
+</header>

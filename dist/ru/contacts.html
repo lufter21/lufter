@@ -11,38 +11,41 @@
 <body>
 
 <!--HEADER/-->
-<header class="header">
-	<div class="row row_col-middle">
-		<div class="col-2 vw1000-col-9">
+<header id="header" class="header">
+	<div class="row row_wrp row_col-middle header__row">
+		<div class="col p-y-0">
 			<a href="/" class="header__logo"><img src="/images/logo.svg" alt="Lufter logo"></a>
 		</div>
-		<div class="col-10 vw1000-col-3">
-
-			<div id="header-mob-menu" class="header__nav-wrap">
-				<nav class="header__nav">
-
+		<div class="col col_grow p-y-0">
+			<div class="row row_col-middle">
+				<nav class="col col_right">
 					<!--Menu/-->
 					<ul class="menu">
-	<li class="menu__item menu_ru_item_current_1">
+	<li class="menu__item ">
 		<a href="/ru/works" class="menu__a">Мои работы</a>
 	</li>
-	<li class="menu__item menu_ru_item_current_2">
+	<li class="menu__item ">
 		<a href="/ru/about.html" class="menu__a">Обо мне</a>
 	</li>
-	<li class="menu__item menu__item_current">
+	<li class="menu__item ">
 		<a href="/ru/contacts.html" class="menu__a">Контакты</a>
 	</li>
 </ul>
 					<!--/Menu-->
-
 				</nav>
+				<div class="col p-0">
+					<!--User/-->
+					
 
+
+					<!--/User-->
+				</div>
 			</div>
-			
-		</div> 
+		</div>
 
-		<button class="js-toggle toggle header__toggle" data-target-elements="#header-mob-menu,.header" data-role="menu"><span></span><span></span><span></span><span></span></button>
+		<button class="js-close-menu menu-close-btn"></button>
 	</div>
+	<button class="js-open-menu open-menu-btn"><span></span><span></span><span></span><span></span></button>
 </header>
 <!--/HEADER-->
 
@@ -81,9 +84,26 @@
 
 <!--FOOTER/-->
 <footer class="footer">
-	<div class="row">
-		<div class="col-12 footer__copy">
-			&copy; 2018 Vitaliy Lufter.<br class="vw1001-hidden"> Full stack web development.
+	<div class="row row_wrp">
+		<div class="col">
+			<a href="#" class="footer__logo"><img src="images/logo.svg" alt="logo"></a>
+		</div>
+		<div class="col col_grow">
+			<ul class="foot-nav">
+				<li class="foot-nav__item"><a href="#" class="foot-nav__a">Item 1</a></li>
+				<li class="foot-nav__item"><a href="#" class="foot-nav__a">Item 2</a></li>
+				<li class="foot-nav__item"><a href="#" class="foot-nav__a">Item 3</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="row row_wrp">
+		<div class="col-12">
+			<div class="footer__txt">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.
+			</div>
 		</div>
 	</div>
 </footer>

@@ -1,27 +1,24 @@
-<header class="header">
-	<div class="row row_col-middle">
-		<div class="col-2 vw1000-col-9">
+<header id="header" class="header">
+	<div class="row row_wrp row_col-middle header__row">
+		<div class="col p-y-0">
 			<a href="/" class="header__logo"><img src="/images/logo.svg" alt="Lufter logo"></a>
 		</div>
-		<div class="col-10 vw1000-col-3">
-
-			<div id="header-mob-menu" class="header__nav-wrap">
-				<nav class="header__nav">
-
+		<div class="col col_grow p-y-0">
+			<div class="row row_col-middle">
+				<nav class="col col_right">
 					<!--Menu/-->
-					@@include('../menu/@@menu.html', {
-						"menu_item_current_1":"@@menu_item_current_1",
-						"menu_item_current_2":"@@menu_item_current_2",
-						"menu_item_current_3":"@@menu_item_current_3"
-					})
+					@@include('menu/@@menu.html', {"menu_item_current": "@@menu_item_current"})
 					<!--/Menu-->
-
 				</nav>
-
+				<div class="col">
+					<!--Lang/-->
+					@@include('lang/lang.html', {"lang_en": "@@lang_en", "lang_ru": "@@lang_ru", "lang_current": "@@lang_current"})
+					<!--/Lang-->
+				</div>
 			</div>
-			
-		</div> 
+		</div>
 
-		<button class="js-toggle toggle header__toggle" data-target-elements="#header-mob-menu,.header" data-role="menu"><span></span><span></span><span></span><span></span></button>
+		<button class="js-close-menu menu-close-btn"></button>
 	</div>
+	<button class="js-open-menu open-menu-btn"><span></span><span></span><span></span><span></span></button>
 </header>
