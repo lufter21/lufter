@@ -77,7 +77,7 @@ var jsSrc = ['src/js/global.js'].concat(modulesOn.map((m) => modules[m]+ '*.js')
 
 //dev build
 gulp.task('dev', function() {
-	HTML(['!src/html/_*.html', 'src/html/*.html']);
+	HTML(['!src/html/_*.html', 'src/html/**/*.html']);
 
 	CSS(cssSrc);
 
@@ -108,12 +108,12 @@ gulp.task('dev', function() {
 	});
 
 	//watch html
-	gulp.watch('src/html/*.html', function(event) {
+	gulp.watch('src/html/**/*.html', function(event) {
 		HTML(['!src/html/_*.html', event.path]);
 	});
 
 	gulp.watch(['src/html/_*.html'].concat(modulesOn.map((m) => modules[m]+ '*.html')), function() {
-		HTML(['!src/html/_*.html', 'src/html/*.html']);
+		HTML(['!src/html/_*.html', 'src/html/**/*.html']);
 	});
 });
 
@@ -222,7 +222,7 @@ function JS(src, dist) {
 //html
 function HTML(src, dist) {
 	if (dist) {
-		gulp.src(src)
+		gulp.src(src, {base: 'src/html/'})
 		.pipe(fileinclude())
 		.pipe(replace('style.css', 'style.min.css'))
 		.pipe(replace('script.js', 'script.min.js'))
@@ -234,7 +234,7 @@ function HTML(src, dist) {
 			message: 'HTML has Compiled!'
 		}));
 	} else {
-		gulp.src(src)
+		gulp.src(src, {base: 'src/html/'})
 		.pipe(fileinclude())
 		.pipe(replace('..\/..\/dist\/', ''))
 		.pipe(gulp.dest('dist'))
