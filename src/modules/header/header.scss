@@ -5,8 +5,9 @@
 
 .header{
 	display: flex;
-	height: 100px;
+	height: 65px;
 	align-items: center;
+	background: $gy;
 	transition: .21s;
 	&_fixed{
 		background: #FFF;
@@ -14,7 +15,11 @@
 	}
 	&__logo{
 		display: inline-block;
-		width: 121px;
+		width: 55px;
+		height: 55px;
+		padding: 6px 3px;
+		border-radius: 50%;
+		background: #fff;
 		img{
 			width: 100%;
 			height: auto;
@@ -62,7 +67,7 @@
 	-webkit-appearance: none;
 	span{
 		height: 3px;
-		background: $rd;
+		background: $gn;
 		position: absolute;
 		left: 0;
 		width: 100%;

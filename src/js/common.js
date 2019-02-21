@@ -3,6 +3,5 @@
 */
 //document is ready
 document.addEventListener('DOMContentLoaded', function() {
-	//init toggle button
-	Toggle.init('.js-toggle');
+	
 });

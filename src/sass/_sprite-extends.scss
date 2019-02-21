@@ -2,29 +2,9 @@
 	background: url("../images/sprite.svg") no-repeat;
 }
 
-%svg-angle-down {
-	@extend %svg-common;
-	background-position: 25.26997840172786% 50%;
-}
-
-%svg-angle-down-dims {
-	width: 340px;
-	height: 532px;
-}
-
-%svg-arrow-alt-circle-down {
-	@extend %svg-common;
-	background-position: 0 100%;
-}
-
-%svg-arrow-alt-circle-down-dims {
-	width: 532px;
-	height: 532px;
-}
-
 %svg-arrow-right {
 	@extend %svg-common;
-	background-position: 0 50%;
+	background-position: 99.96646171045276% 0;
 }
 
 %svg-arrow-right-dims {
@@ -32,19 +12,29 @@
 	height: 532px;
 }
 
-%svg-check {
+%svg-css3 {
 	@extend %svg-common;
-	background-position: 94.31818181818181% 91.40893470790378%;
+	background-position: 39.42028985507246% 66.66666666666667%;
 }
 
-%svg-check-dims {
-	width: 432px;
-	height: 432px;
+%svg-css3-dims {
+	width: 532px;
+	height: 532px;
+}
+
+%svg-envelope {
+	@extend %svg-common;
+	background-position: 0 100%;
+}
+
+%svg-envelope-dims {
+	width: 532px;
+	height: 532px;
 }
 
 %svg-facebook {
 	@extend %svg-common;
-	background-position: 69.1415313225058% 0;
+	background-position: 99.96646171045276% 33.333333333333336%;
 }
 
 %svg-facebook-dims {
@@ -52,49 +42,109 @@
 	height: 532px;
 }
 
-%svg-odnoklassniki {
+%svg-facebook-messenger {
 	@extend %svg-common;
-	background-position: 89.63282937365011% 50%;
+	background-position: 99.96646171045276% 66.66666666666667%;
 }
 
-%svg-odnoklassniki-dims {
-	width: 340px;
+%svg-facebook-messenger-dims {
+	width: 468px;
 	height: 532px;
 }
 
-%svg-plus-circle {
+%svg-git {
 	@extend %svg-common;
-	background-position: 32.04819277108434% 100%;
+	background-position: 73.80659586361095% 33.333333333333336%;
 }
 
-%svg-plus-circle-dims {
+%svg-git-dims {
+	width: 468px;
+	height: 532px;
+}
+
+%svg-gulp {
+	@extend %svg-common;
+	background-position: 0 66.66666666666667%;
+}
+
+%svg-gulp-dims {
+	width: 276px;
+	height: 532px;
+}
+
+%svg-html5 {
+	@extend %svg-common;
+	background-position: 14.894765245547761% 66.66666666666667%;
+}
+
+%svg-html5-dims {
+	width: 404px;
+	height: 532px;
+}
+
+%svg-js {
+	@extend %svg-common;
+	background-position: 73.80659586361095% 0;
+}
+
+%svg-js-dims {
+	width: 468px;
+	height: 532px;
+}
+
+%svg-mysql {
+	@extend %svg-common;
+	background-position: 70.26086956521739% 66.66666666666667%;
+}
+
+%svg-mysql-dims {
 	width: 532px;
 	height: 532px;
 }
 
-%svg-search {
+%svg-php {
 	@extend %svg-common;
-	background-position: 64.09638554216868% 100%;
+	background-position: 41.35253600500939% 0;
 }
 
-%svg-search-dims {
-	width: 532px;
+%svg-php-dims {
+	width: 660px;
 	height: 532px;
 }
 
-%svg-twitter {
+%svg-sass {
 	@extend %svg-common;
-	background-position: 100% 0;
+	background-position: 0 0;
 }
 
-%svg-twitter-dims {
+%svg-sass-dims {
+	width: 660.4px;
+	height: 532px;
+}
+
+%svg-share-square {
+	@extend %svg-common;
+	background-position: 0 33.333333333333336%;
+}
+
+%svg-share-square-dims {
+	width: 596px;
+	height: 532px;
+}
+
+%svg-viber {
+	@extend %svg-common;
+	background-position: 30.840579710144926% 100%;
+}
+
+%svg-viber-dims {
 	width: 532px;
 	height: 532px;
 }
 
 %svg-vk {
 	@extend %svg-common;
-	background-position: 37.34335839598997% 0;
+	background-position: 35.88199879590608% 33.333333333333336%;
 }
 
 %svg-vk-dims {
@@ -102,13 +152,13 @@
 	height: 532px;
 }
 
-%svg-youtube {
+%svg-wordpress {
 	@extend %svg-common;
-	background-position: 0 0;
+	background-position: 61.68115942028985% 100%;
 }
 
-%svg-youtube-dims {
-	width: 596px;
+%svg-wordpress-dims {
+	width: 532px;
 	height: 532px;
 }
 

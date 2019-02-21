@@ -1,64 +1,53 @@
 @import "sprite-extends";
 
 //gulp svg sprite bg size mixin
-$sprite-width: 2192;
+$sprite-width: 2257;
 @mixin bgs($icon-svg-w: 1) {
 	background-size: ($sprite-width / $icon-svg-w) * 100% auto;
 }
 
 /*sprites*/
-.menu__arr{
-	@extend %svg-angle-down;
-	@include bgs(340);
-}
-
-.accord__button:after{
-	@extend %svg-arrow-alt-circle-down;
-	@include bgs(512);
-}
-
-.arrow-btn:after{
+.arrow-btn::after{
 	@extend %svg-arrow-right;
+	@include bgs(468);
+}
+.html5-icon{
+	@extend %svg-html5;
+	@include bgs(384);
+}
+.css3-icon{
+	@extend %svg-css3;
+	@include bgs(512);
+}
+.js-icon{
+	@extend %svg-js;
 	@include bgs(448);
 }
-
-.plus-btn:after{
-	@extend %svg-plus-circle;
+.php-icon{
+	@extend %svg-php;
+	@include bgs(640);
+}
+.mysql-icon{
+	@extend %svg-mysql;
 	@include bgs(512);
 }
-
-.form__btn_search:before{
-	@extend %svg-search;
+.wordpress-icon{
+	@extend %svg-wordpress;
 	@include bgs(512);
 }
-
-.custom-checkbox__input:checked + .custom-checkbox__label:before{
-	@extend %svg-check;
-	@include bgs(432);
+.gulp-icon{
+	@extend %svg-gulp;
+	@include bgs(256);
 }
-
-.vk-btn{
-	@extend %svg-vk;
-	@include bgs(576);
+.sass-icon{
+	@extend %svg-sass;
+	@include bgs(640);
 }
-
-.fb-btn{
-	@extend %svg-facebook;
+.git-icon{
+	@extend %svg-git;
 	@include bgs(448);
 }
-
-.tw-btn{
-	@extend %svg-twitter;
-	@include bgs(512);
-}
-
-.ok-btn{
-	@extend %svg-odnoklassniki;
-	@include bgs(320);
-}
-
-.video__btn-play,
-.icon:before{
-	@extend %svg-youtube;
-	@include bgs(576);
+.work__date:before{
+	@extend %svg-share-square;
+	@include bgs(596);
 }

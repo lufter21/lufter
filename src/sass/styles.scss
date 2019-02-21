@@ -6,7 +6,7 @@
 /* main */
 .main{
 	&, &__full-page{
-		padding-top: 100px;
+		padding-top: 65px;
 	}
 	&__full-page{
 		@extend %fwh;
@@ -71,10 +71,10 @@ ol.list{
 
 /* title */
 .title{
-	font-size: 30px;
+	font-size: 26px;
 	font-weight: 700;
-	line-height: 1.2;
-	margin-bottom: em(35,30);
+	color: $gn;
+	margin-bottom: em(25,26);
 }
 
 /* article */
@@ -95,5 +95,178 @@ ol.list{
 		line-height: 1.35;
 		margin-top: 35px;
 		@include fch(t);
+	}
+}
+
+/* work */
+.work{
+	padding-bottom: 35px;
+	margin-bottom: 35px;
+	position: relative;
+	&__thumb{
+		border: 2px solid $gy;
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__info{
+		padding: 15px 0 0 15px;
+	}
+	&:before{
+		@extend %ab;
+		position: absolute;
+		bottom: 0;
+		left: 10px;
+		right: 10px;
+		height: 1px;
+		background: $gy;
+	}
+	&:last-child{
+		margin-bottom: 0;
+		padding-bottom: 0;
+		&:before{
+			display: none;
+		}
+	}
+	&__title{
+		font-size: 18px;
+		font-weight: 500;
+		margin-bottom: 5px;
+	}
+	&__desc{
+		font-size: 14px;
+		line-height: 1.3;
+		margin-bottom: 25px;
+		color: $dgy;
+	}
+	&__techn{
+		margin-bottom: 25px;
+	}
+	&__icon{
+		margin: 0 10px;
+		vertical-align: middle;
+	}
+	&__date{
+		font-size: 14px;
+		color: $dgy;
+		margin-top: 15px;
+		position: relative;
+		padding-left: 22px;
+		opacity: .75;
+		&:before{
+			@extend %ab;
+			width: 15px;
+			height: 14px;
+			// @extend %svg-share-square;
+			// @include bgs(576);
+			position: absolute;
+			left: 0;
+			top: 50%;
+			margin-top: -8px;
+		}
+	}
+	@media(max-width: 1000px){
+		&__info{
+			padding: 0;
+		}
+		&__icon{
+			margin: 0 7px 15px;
+		}
+	}
+}
+
+/*person*/
+.person{
+	&__thumb{
+		border: 2px solid $gy;
+	}
+	
+	&__info{
+		padding: 15px 15px 0 0;
+	}
+	
+	@media(max-width: 1000px){
+		&__info{
+			padding: 0;
+			margin-bottom: 15px;
+		}
+		
+	}
+}
+
+/*skills*/
+.skills{
+	&__icon{
+		margin: 0 7px 15px;
+		vertical-align: middle;
+	}
+}
+
+/*contact*/
+.contact{
+	margin-top: 35px;
+	
+	&__link{
+		display: inline-block;
+		padding-left: 48px;
+		position: relative;
+		margin: 20px 0;
+		
+		&:before{
+			@extend %ab;
+			width: 35px;
+			height: 35px;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			margin-top: -17px;
+		}
+		
+		&:first-child{
+			margin-left: 0;
+		}
+		
+		&:hover{
+			text-decoration: none;
+		}
+		
+		// &_envelope{
+		// 	&:before{
+		// 		height: 30px;
+		// 		@extend %svg-envelope;
+		// 		@include bgs(512);
+		// 	}
+		// }
+		
+		// &_viber{
+		// 	&:before{
+		// 		height: 37px;
+		// 		@extend %svg-viber;
+		// 		@include bgs(512);
+		// 	}
+		// }
+		
+		// &_facebook{
+		// 	&:before{
+		// 		width: 32px;
+		// 		@extend %svg-facebook;
+		// 		@include bgs(448);
+		// 	}
+		// }
+		
+		// &_fb-messenger{
+		// 	&:before{
+		// 		width: 32px;
+		// 		@extend %svg-facebook-messenger;
+		// 		@include bgs(448);
+		// 	}
+		// }
+	}
+	
+	@media(max-width: 1000px){
+		&__link{
+			margin: 15px 0;
+		}
 	}
 }
