@@ -47,7 +47,23 @@ $sprite-width: 2257;
 	@extend %svg-git;
 	@include bgs(448);
 }
-.work__date:before{
+.work__date::before{
 	@extend %svg-share-square;
 	@include bgs(596);
+}
+.email-link::before{
+	@extend %svg-envelope;
+	@include bgs(532);
+}
+.viber-link::before{
+	@extend %svg-viber;
+	@include bgs(532);
+}
+.fbk-link::before{
+	@extend %svg-facebook;
+	@include bgs(468);
+}
+.messenger-link::before{
+	@extend %svg-facebook-messenger;
+	@include bgs(468);
 }

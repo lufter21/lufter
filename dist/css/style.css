@@ -984,6 +984,52 @@ hr {
   height: 35px;
 }
 
+/* icon link */
+.email-link, .viber-link, .fbk-link, .messenger-link {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  border-bottom: 1px solid #afc5a3;
+  margin-left: 48px;
+  transition: .21s;
+}
+
+.email-link:hover, .viber-link:hover, .fbk-link:hover, .messenger-link:hover {
+  border-bottom-color: transparent;
+}
+
+.email-link:before, .viber-link:before, .fbk-link:before, .messenger-link:before {
+  display: block;
+  content: "";
+  position: absolute;
+  left: -48px;
+  top: 50%;
+}
+
+.email-link:before {
+  width: 35px;
+  height: 32px;
+  margin-top: -15px;
+}
+
+.viber-link:before {
+  width: 35px;
+  height: 37px;
+  margin-top: -18px;
+}
+
+.fbk-link:before {
+  width: 32px;
+  height: 35px;
+  margin-top: -18px;
+}
+
+.messenger-link:before {
+  width: 32px;
+  height: 35px;
+  margin-top: -16px;
+}
+
 /* link */
 .link, .green-link {
   text-decoration: none;
@@ -1337,7 +1383,7 @@ hr {
   line-height: 1.3;
 }
 
-.list li:before, .work:before, .work__date:before, .contact__link:before {
+.list li:before, .article ul li:before, .article ol li:before, .work:before, .work__date:before {
   display: block;
   content: "";
 }
@@ -1420,6 +1466,16 @@ ol.list li:before {
   margin-bottom: 0.96154em;
 }
 
+/* paragraph */
+.par {
+  line-height: 1.5;
+  margin-top: 25px;
+}
+
+.par:first-child {
+  margin-top: 0 !important;
+}
+
 /* article */
 .article h2 {
   font-size: 22px;
@@ -1433,7 +1489,7 @@ ol.list li:before {
 }
 
 .article p {
-  line-height: 1.35;
+  line-height: 1.5;
   margin-top: 25px;
 }
 
@@ -1448,6 +1504,63 @@ ol.list li:before {
 
 .article blockquote:first-child {
   margin-top: 0 !important;
+}
+
+.article ul, .article ol {
+  list-style: none;
+  margin-top: 25px;
+}
+
+.article ul:first-child, .article ol:first-child {
+  margin-top: 0 !important;
+}
+
+.article ul li, .article ol li {
+  line-height: 1.5;
+  padding-left: 30px;
+  margin-top: 15px;
+  position: relative;
+}
+
+.article ul li:first-child, .article ol li:first-child {
+  margin-top: 0 !important;
+}
+
+.article ul li:before, .article ol li:before {
+  position: absolute;
+}
+
+.article ul li:before {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  left: 3px;
+  top: 7px;
+  background: #afc5a3;
+}
+
+.article ol {
+  counter-reset: listCounter;
+}
+
+.article ol li:before {
+  counter-increment: listCounter;
+  content: counter(listCounter) ".";
+  color: #0000ff;
+  font-weight: 700;
+  top: 0;
+  left: 0;
+}
+
+.article a {
+  color: #0000ff;
+  text-decoration: none;
+  border-bottom: 1px solid #0000ff;
+  transition: .21s;
+}
+
+.article a:hover {
+  border-bottom-color: transparent;
 }
 
 /* work */
@@ -1559,42 +1672,12 @@ ol.list li:before {
   vertical-align: middle;
 }
 
-/*contact*/
-.contact {
-  margin-top: 35px;
+/* contacts */
+.contacts__row {
+  margin-bottom: 30px;
 }
 
-.contact__link {
-  display: inline-block;
-  padding-left: 48px;
-  position: relative;
-  margin: 20px 0;
-}
-
-.contact__link:before {
-  width: 35px;
-  height: 35px;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  margin-top: -17px;
-}
-
-.contact__link:first-child {
-  margin-left: 0;
-}
-
-.contact__link:hover {
-  text-decoration: none;
-}
-
-@media (max-width: 1000px) {
-  .contact__link {
-    margin: 15px 0;
-  }
-}
-
-.arrow-btn::after, .css3-icon, .git-icon, .gulp-icon, .html5-icon, .js-icon, .mysql-icon, .php-icon, .sass-icon, .work__date:before, .wordpress-icon {
+.arrow-btn::after, .css3-icon, .email-link::before, .fbk-link::before, .messenger-link::before, .git-icon, .gulp-icon, .html5-icon, .js-icon, .mysql-icon, .php-icon, .sass-icon, .work__date::before, .viber-link::before, .wordpress-icon {
   background: url("../images/sprite.svg") no-repeat;
 }
 
@@ -1604,6 +1687,18 @@ ol.list li:before {
 
 .css3-icon {
   background-position: 39.42028985507246% 66.66666666666667%;
+}
+
+.email-link::before {
+  background-position: 0 100%;
+}
+
+.fbk-link::before {
+  background-position: 99.96646171045276% 33.333333333333336%;
+}
+
+.messenger-link::before {
+  background-position: 99.96646171045276% 66.66666666666667%;
 }
 
 .git-icon {
@@ -1634,8 +1729,12 @@ ol.list li:before {
   background-position: 0 0;
 }
 
-.work__date:before {
+.work__date::before {
   background-position: 0 33.333333333333336%;
+}
+
+.viber-link::before {
+  background-position: 30.840579710144926% 100%;
 }
 
 .wordpress-icon {
@@ -1683,8 +1782,24 @@ ol.list li:before {
   background-size: 503.79464% auto;
 }
 
-.work__date:before {
+.work__date::before {
   background-size: 378.69128% auto;
+}
+
+.email-link::before {
+  background-size: 424.24812% auto;
+}
+
+.viber-link::before {
+  background-size: 424.24812% auto;
+}
+
+.fbk-link::before {
+  background-size: 482.26496% auto;
+}
+
+.messenger-link::before {
+  background-size: 482.26496% auto;
 }
 
 

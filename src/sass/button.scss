@@ -91,6 +91,58 @@
 	height: 35px;
 }
 
+/* icon link */
+%icon-link{
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+	border-bottom: 1px solid $gngy;
+	margin-left: 48px;
+	transition: .21s;
+	&:hover{
+		border-bottom-color: transparent;
+	}
+	&:before{
+		display: block;
+		content: "";
+		position: absolute;
+		left: -48px;
+		top: 50%;
+	}
+}
+.email-link{
+	@extend %icon-link;
+	&:before{
+		width: 35px;
+		height: 32px;
+		margin-top: -15px;
+	}
+}
+.viber-link{
+	@extend %icon-link;
+	&:before{
+		width: 35px;
+		height: 37px;
+		margin-top: -18px;
+	}
+}
+.fbk-link{
+	@extend %icon-link;
+	&:before{
+		width: 32px;
+		height: 35px;
+		margin-top: -18px;
+	}
+}
+.messenger-link{
+	@extend %icon-link;
+	&:before{
+		width: 32px;
+		height: 35px;
+		margin-top: -16px;
+	}
+}
+
 /* link */
 %link{
 	text-decoration: none;
