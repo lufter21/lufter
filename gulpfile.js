@@ -49,7 +49,7 @@ const modulesOn = [
 	// 'mouseparallax',
 	// 'floatslider',
 	// 'slickslider',
-	// 'scrollpane',
+	// 'scrollpane'
 ],
 dist_path = 'dist';
 

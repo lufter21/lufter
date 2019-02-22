@@ -13,7 +13,7 @@ $sprite-width: 2257;
 }
 .html5-icon{
 	@extend %svg-html5;
-	@include bgs(384);
+	@include bgs(404);
 }
 .css3-icon{
 	@extend %svg-css3;
