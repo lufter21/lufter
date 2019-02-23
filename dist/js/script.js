@@ -1,26 +1,27 @@
 // global variables
-; var browser, elemIsHidden, ajax, animate;
+;var browser, elemIsHidden, ajax, animate;
 
-(function() {
+(function () {
 	'use strict';
-	
+
 	// Get useragent
+
 	document.documentElement.setAttribute('data-useragent', navigator.userAgent.toLowerCase());
-	
+
 	// Browser identify
-	browser = (function(userAgent) {
+	browser = function (userAgent) {
 		userAgent = userAgent.toLowerCase();
-		
+
 		if (/(msie|rv:11\.0)/.test(userAgent)) {
 			return 'ie';
 		}
-	})(navigator.userAgent);
-	
+	}(navigator.userAgent);
+
 	// Add support CustomEvent constructor for IE
 	try {
 		new CustomEvent("IE has CustomEvent, but doesn't support constructor");
 	} catch (e) {
-		window.CustomEvent = function(event, params) {
+		window.CustomEvent = function (event, params) {
 			var evt = document.createEvent("CustomEvent");
 
 			params = params || {
@@ -30,42 +31,42 @@
 			};
 
 			evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
-			
+
 			return evt;
-		}
-		
+		};
+
 		CustomEvent.prototype = Object.create(window.Event.prototype);
 	}
-	
+
 	// Window Resized Event
-	const winResizedEvent = new CustomEvent('winResized');
-	let rsz = true;
-	
-	window.addEventListener('resize', function() {
+	var winResizedEvent = new CustomEvent('winResized');
+	var rsz = true;
+
+	window.addEventListener('resize', function () {
 		if (rsz) {
 			rsz = false;
-			
-			setTimeout(function() {
+
+			setTimeout(function () {
 				window.dispatchEvent(winResizedEvent);
 				rsz = true;
 			}, 1021);
 		}
 	});
-	
+
 	// Closest polyfill
 	if (!Element.prototype.closest) {
-		(function(ElProto) {
+		(function (ElProto) {
 			ElProto.matches = ElProto.matches || ElProto.mozMatchesSelector || ElProto.msMatchesSelector || ElProto.oMatchesSelector || ElProto.webkitMatchesSelector;
-			
+
 			ElProto.closest = ElProto.closest || function closest(selector) {
 				if (!this) {
 					return null;
 				}
-				
+
 				if (this.matches(selector)) {
 					return this;
 				}
-				
+
 				if (!this.parentElement) {
 					return null;
 				} else {
@@ -74,59 +75,59 @@
 			};
 		})(Element.prototype);
 	}
-	
+
 	// Check element for hidden
-	elemIsHidden = function(elem) {
+	elemIsHidden = function elemIsHidden(elem) {
 		while (elem) {
 			if (!elem) break;
-			
-			const compStyle = getComputedStyle(elem);
-			
+
+			var compStyle = getComputedStyle(elem);
+
 			if (compStyle.display == 'none' || compStyle.visibility == 'hidden' || compStyle.opacity == '0') return true;
-			
+
 			elem = elem.parentElement;
 		}
-		
+
 		return false;
-	}
-	
+	};
+
 	// Ajax
-	ajax = function(options) {
-		const xhr = new XMLHttpRequest();
-		
+	ajax = function ajax(options) {
+		var xhr = new XMLHttpRequest();
+
 		xhr.open('POST', options.url);
-		
+
 		if (typeof options.send == 'string') {
 			xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 		}
-		
-		xhr.onreadystatechange = function() {
+
+		xhr.onreadystatechange = function () {
 			if (xhr.readyState == 4 && xhr.status == 200) {
 				options.success(xhr.response);
 			} else if (xhr.readyState == 4 && xhr.status != 200) {
 				options.error(xhr.response);
 			}
-		}
-		
+		};
+
 		xhr.send(options.send);
-	}
-	
+	};
+
 	/*
-	Animation
-	animate(function(takes 0...1) {}, Int duration in ms[, Str easing[, Fun animation complete]]);
-	*/
-	animate = function(draw, duration, ease, complete) {
-		const start = performance.now();
-		
+ Animation
+ animate(function(takes 0...1) {}, Int duration in ms[, Str easing[, Fun animation complete]]);
+ */
+	animate = function animate(draw, duration, ease, complete) {
+		var start = performance.now();
+
 		requestAnimationFrame(function anim(time) {
-			let timeFraction = (time - start) / duration;
-			
+			var timeFraction = (time - start) / duration;
+
 			if (timeFraction > 1) {
 				timeFraction = 1;
 			}
-			
-			draw((ease) ? easing(timeFraction, ease) : timeFraction);
-			
+
+			draw(ease ? easing(timeFraction, ease) : timeFraction);
+
 			if (timeFraction < 1) {
 				requestAnimationFrame(anim);
 			} else {
@@ -135,38 +136,39 @@
 				}
 			}
 		});
-	}
-	
+	};
+
 	function easing(timeFraction, ease) {
 		switch (ease) {
 			case 'easeInQuad':
-			return quad(timeFraction);
-			
+				return quad(timeFraction);
+
 			case 'easeOutQuad':
-			return 1 - quad(1 - timeFraction);
-			
+				return 1 - quad(1 - timeFraction);
+
 			case 'easeInOutQuad':
-			if (timeFraction <= 0.5) {
-				return quad(2 * timeFraction) / 2;
-			} else {
-				return (2 - quad(2 * (1 - timeFraction))) / 2;
-			}
+				if (timeFraction <= 0.5) {
+					return quad(2 * timeFraction) / 2;
+				} else {
+					return (2 - quad(2 * (1 - timeFraction))) / 2;
+				}
 		}
 	}
-	
+
 	function quad(timeFraction) {
-		return Math.pow(timeFraction, 2)
+		return Math.pow(timeFraction, 2);
 	}
 })();
-; var MobNav;
+;var MobNav;
 
-(function() {
+(function () {
 	'use strict';
 
 	//fix header
+
 	var headerElem = document.querySelector('.header');
 
-	window.addEventListener('scroll', function() {
+	window.addEventListener('scroll', function () {
 		if (window.pageYOffset > 21) {
 			headerElem.classList.add('header_fixed');
 		} else if (!document.body.classList.contains('popup-is-opened') && !document.body.classList.contains('mob-nav-is-opened')) {
@@ -179,12 +181,12 @@
 		options: null,
 		winScrollTop: 0,
 
-		fixBody: function(st) {
+		fixBody: function fixBody(st) {
 			if (st) {
 				this.winScrollTop = window.pageYOffset;
 
 				document.body.classList.add('mob-nav-is-opened');
-				document.body.style.top = -this.winScrollTop +'px';
+				document.body.style.top = -this.winScrollTop + 'px';
 			} else {
 				document.body.classList.remove('mob-nav-is-opened');
 
@@ -194,7 +196,7 @@
 			}
 		},
 
-		open: function(btnElem) {
+		open: function open(btnElem) {
 			var headerElem = document.getElementById(this.options.headerId);
 
 			if (!headerElem) return;
@@ -208,7 +210,7 @@
 			}
 		},
 
-		close: function() {
+		close: function close() {
 			var headerElem = document.getElementById(this.options.headerId);
 
 			if (!headerElem) return;
@@ -224,22 +226,24 @@
 			this.fixBody(false);
 		},
 
-		init: function(options) {
+		init: function init(options) {
+			var _this = this;
+
 			this.options = options;
 
-			document.addEventListener('click', (e) => {
+			document.addEventListener('click', function (e) {
 				var openElem = e.target.closest(options.openBtn),
-				closeElem = e.target.closest(options.closeBtn),
-				menuLinkElement = e.target.closest(options.menuLinkSelector);
+				    closeElem = e.target.closest(options.closeBtn),
+				    menuLinkElement = e.target.closest(options.menuLinkSelector);
 
 				if (openElem) {
 					e.preventDefault();
-					this.open(openElem);
+					_this.open(openElem);
 				} else if (closeElem) {
 					e.preventDefault();
-					this.close();
+					_this.close();
 				} else if (menuLinkElement) {
-					this.close();
+					_this.close();
 				}
 			});
 		}
@@ -250,11 +254,11 @@
 */
 var Menu;
 
-(function() {
+(function () {
 	'use strict';
 
 	Menu = {
-		toggle: function(elem, elementStr, subMenuStr) {
+		toggle: function toggle(elem, elementStr, subMenuStr) {
 			var subMenuElem = elem.querySelector(subMenuStr);
 
 			if (!subMenuElem) {
@@ -267,29 +271,31 @@ var Menu;
 				elem.classList.remove('active');
 			} else {
 				var mainElem = elem.closest('.menu'),
-				itemElements = mainElem.querySelectorAll(elementStr),
-				subMenuElements = mainElem.querySelectorAll(subMenuStr);
+				    itemElements = mainElem.querySelectorAll(elementStr),
+				    subMenuElements = mainElem.querySelectorAll(subMenuStr);
 
 				for (var i = 0; i < itemElements.length; i++) {
 					itemElements[i].classList.remove('accord__button_active');
 					subMenuElements[i].style.height = 0;
 				}
 
-				subMenuElem.style.height = subMenuElem.scrollHeight +'px';
+				subMenuElem.style.height = subMenuElem.scrollHeight + 'px';
 
 				elem.classList.add('active');
 			}
 		},
 
-		init: function(elementStr, subMenuStr) {
-			document.addEventListener('click', (e) => {
+		init: function init(elementStr, subMenuStr) {
+			var _this = this;
+
+			document.addEventListener('click', function (e) {
 				var elem = e.target.closest(elementStr);
 
 				if (!elem) {
 					return;
 				}
 
-				this.toggle(elem, elementStr, subMenuStr);
+				_this.toggle(elem, elementStr, subMenuStr);
 			});
 		}
 	};

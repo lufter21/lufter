@@ -44,7 +44,7 @@
 
 %svg-facebook-messenger {
 	@extend %svg-common;
-	background-position: 99.96646171045276% 66.66666666666667%;
+	background-position: 59.474566797093345% 100%;
 }
 
 %svg-facebook-messenger-dims {
@@ -132,6 +132,16 @@
 	height: 532px;
 }
 
+%svg-telegram-plane {
+	@extend %svg-common;
+	background-position: 99.96646171045276% 66.66666666666667%;
+}
+
+%svg-telegram-plane-dims {
+	width: 468px;
+	height: 532px;
+}
+
 %svg-viber {
 	@extend %svg-common;
 	background-position: 30.840579710144926% 100%;
@@ -154,7 +164,7 @@
 
 %svg-wordpress {
 	@extend %svg-common;
-	background-position: 61.68115942028985% 100%;
+	background-position: 88.81159420289855% 100%;
 }
 
 %svg-wordpress-dims {

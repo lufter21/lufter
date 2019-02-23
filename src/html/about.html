@@ -1,27 +1,29 @@
-@@include('_head.html', {"title": "Full stack web developer"})
+@@include('_head.html', {"title": "Full stack web developer", "canon":"https://lufter.dealersair.com/about.html"})
 
 <!--HEADER/-->
-@@include('../modules/header/header.html', {"menu":"menu", "menu_item_current_2":"menu__item_current"})
+@@include('../modules/header/header.html', {"menu":"menu", "menu_item_current":"about", "lang_current": "en", "lang_ru":"/ru/about.html", "lang_en":"#"})
 <!--/HEADER-->
 
 <!--MAIN/-->
 <main class="main">
-
-	<div class="container">
-		<div class="row">
+	<div class="section">
+		<div class="row row_wrp">
 			<div class="col-12">
-				<h1>About Me</h1>
+				<h1 class="title">About Me</h1>
 			</div>
 		</div>
 
-		<div class="person row">
+		<div class="person row row_wrp">
 			<div class="col-7">
-				<div class="person__info">
+				<div class="article person__info">
 					<p>
-						My name is Vitalii Bokhin. My nickname is Lufter, Vitaliy Lufter. I live in Lviv, Ukraine.<br> I'm full stack web developer.
+						My name is Vitaliy Bokhin. My nickname is Lufter, Vitaliy Lufter.<br> 
+						I live in&nbsp;Lviv, Ukraine.<br> 
+						I'm full stack web developer.
 					</p>
 					<p>
-						I'm doing web development since 2012. I'm freelancer.<br> I have 100+ successfully completed projects, some of which are presented in the <a href="/works">portfolio</a>.
+						I'm doing web development since 2012. I'm freelancer.<br> 
+						I have 100+ successfully completed projects, some of which are presented in the <a href="/works" class="green-link">portfolio</a>.
 					</p>
 					<h2>Skills</h2>
 					<div class="skills">
@@ -31,6 +33,9 @@
 						<span class="php-icon skills__icon" title="php"></span>
 						<span class="mysql-icon skills__icon" title="MySQL"></span>
 						<span class="wordpress-icon skills__icon" title="WordPress"></span>
+					</div>
+					<h2>Tools</h2>
+					<div class="skills">
 						<span class="gulp-icon skills__icon" title="Gulp"></span>
 						<span class="sass-icon skills__icon" title="SASS"></span>
 						<span class="git-icon skills__icon" title="Git"></span>
@@ -39,12 +44,11 @@
 			</div>
 			<div class="col-5">
 				<div class="person__thumb">
-					<img src="images/vitalii-lufter-bokhin.jpg" class="full-width-img" alt="Vitaliy Lufter">
+					<img src="/images/vitalii-lufter-bokhin.jpg" alt="Vitaliy Lufter">
 				</div>
 			</div>
 		</div>
 	</div>
-
 </main>
 <!--/MAIN-->
 

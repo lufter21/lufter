@@ -63,6 +63,10 @@ $sprite-width: 2257;
 	@extend %svg-facebook;
 	@include bgs(468);
 }
+.teleg-link::before{
+	@extend %svg-telegram-plane;
+	@include bgs(468);
+}
 .messenger-link::before{
 	@extend %svg-facebook-messenger;
 	@include bgs(468);
