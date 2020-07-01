@@ -1,5 +1,5 @@
 //document is ready
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
 	// mobile nav
 	if (window.innerWidth < 1200) {
 		MobNav.init({
