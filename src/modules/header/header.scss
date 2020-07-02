@@ -15,15 +15,10 @@
 	}
 	&__logo{
 		display: inline-block;
-		width: 55px;
-		height: 55px;
-		padding: 6px 3px;
-		border-radius: 50%;
-		background: #fff;
-		img{
-			width: 100%;
-			height: auto;
-		}
+		font-size: 21px;
+		font-weight: 700;
+		text-decoration: none;
+		line-height: normal;
 	}
 	@media(max-width: 1000px){
 		height: 65px;
