@@ -47,10 +47,7 @@ $sprite-width: 2257;
 	@extend %svg-git;
 	@include bgs(448);
 }
-.work__date::before{
-	@extend %svg-share-square;
-	@include bgs(596);
-}
+
 .email-link::before{
 	@extend %svg-envelope;
 	@include bgs(532);
